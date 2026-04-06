@@ -1,8 +1,8 @@
 class Yt < Formula
   desc "TailDay YouTrack CLI"
   homepage "https://github.com/TailDayDev/yt"
-  url "https://codeload.github.com/TailDayDev/yt/tar.gz/refs/tags/v0.2.0"
-  sha256 "05d655114b5ffe346e94bf7f4dd910c631f9144d5958cdbc4a6cb4b50b320a44"
+  url "https://codeload.github.com/TailDayDev/yt/tar.gz/refs/tags/v0.3.0"
+  sha256 "93c74bb699f4131481aba7008c5f5bdb73feb90b62a018ff4c35e00d7182990f"
   license "UNLICENSED"
 
   depends_on "node"
@@ -15,7 +15,7 @@ class Yt < Formula
       "yt_params_schema.js",
       "api",
       "config",
-      "skill",
+      "skills-codex",
       "tests",
     ]
 
@@ -23,6 +23,6 @@ class Yt < Formula
   end
 
   test do
-    assert_equal "0.2.0", shell_output("#{bin}/yt version").strip
+    assert_equal "0.3.0", shell_output("#{bin}/yt version").strip
   end
 end

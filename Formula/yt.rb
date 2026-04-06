@@ -1,8 +1,8 @@
 class Yt < Formula
   desc "TailDay YouTrack CLI"
   homepage "https://github.com/TailDayDev/yt"
-  url "https://codeload.github.com/TailDayDev/yt/tar.gz/refs/tags/v0.3.0"
-  sha256 "93c74bb699f4131481aba7008c5f5bdb73feb90b62a018ff4c35e00d7182990f"
+  url "https://codeload.github.com/TailDayDev/yt/tar.gz/refs/tags/v0.3.1"
+  sha256 "24612e929fa0579981fd0ffc99b18301d12f7abbbc2fca7378001a62d49e2430"
   license "UNLICENSED"
 
   depends_on "node"
@@ -10,6 +10,8 @@ class Yt < Formula
   def install
     libexec.install Dir[
       "README.md",
+      "Screenshot 2026-04-06 at 10.31.05.png",
+      "Screenshot 2026-04-06 at 10.31.36.png",
       "package.json",
       "yt",
       "yt_params_schema.js",
@@ -23,6 +25,6 @@ class Yt < Formula
   end
 
   test do
-    assert_equal "0.3.0", shell_output("#{bin}/yt version").strip
+    assert_equal "0.3.1", shell_output("#{bin}/yt version").strip
   end
 end

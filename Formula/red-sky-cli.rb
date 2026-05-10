@@ -7,10 +7,12 @@ class RedSkyCli < Formula
   license "UNLICENSED"
 
   def install
-    pkg = Dir.glob((buildpath / "red-sky-cli-*").to_s).first
-    odie "Expected red-sky-cli-* extraction directory" if pkg.nil?
+    root = Dir.glob("#{buildpath}/bin/red-sky").first ? buildpath.to_s : "#{buildpath}/red-sky-cli-#{version}"
+    script = "#{root}/bin/red-sky"
 
-    bin.install Pathname(pkg) / "bin" / "red-sky"
+    odie "Cannot find #{script}" unless File.exist?(script)
+
+    bin.install script
   end
 
   test do

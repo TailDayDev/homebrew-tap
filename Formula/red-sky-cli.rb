@@ -1,9 +1,9 @@
 class RedSkyCli < Formula
   desc "CLI for Tailday Admin dictionary (gettranslationlist)"
   homepage "https://github.com/TailDayDev/red-sky-cli"
-  version "0.1.0"
-  url "https://codeload.github.com/TailDayDev/red-sky-cli/tar.gz/refs/tags/v0.1.0"
-  sha256 "93846c47ee57d46df89d3d4a9a8e453103598b748c597bc9e545edcfe747b9d6"
+  version "0.2.0"
+  url "https://codeload.github.com/TailDayDev/red-sky-cli/tar.gz/refs/tags/v0.2.0"
+  sha256 "28166b5b0ec17bbf43d99aaf1138c9275c209668a6601fb13ea57494022776a6"
   license "UNLICENSED"
 
   def install
